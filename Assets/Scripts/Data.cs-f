@@ -1,0 +1,31 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+
+
+[System.Serializable]
+
+public class Data
+{
+
+    public static Data instance;
+    
+    public string PlayerName;
+    public int GameDifficulty;
+    public int SaveSlot;
+
+    public SaveData (Data save)
+    {
+        PlayerName = save.PlayerName;
+        GameDifficulty = save.GameDifficulty;
+        SaveSlot = save.SaveSlot;
+
+        return save;
+
+
+        // None of this shit works, so what you are going to do is change it into a system like this guys: https://www.youtube.com/watch?v=0BpP4TUKqFA
+
+    }
+
+}

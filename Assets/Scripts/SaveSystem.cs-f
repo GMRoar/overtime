@@ -1,0 +1,51 @@
+using System.Collections;
+using System.Collections.Generic;
+using System;
+using UnityEngine;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+
+public class SaveSystem
+{
+    static int SaveSlot = Data.instance.SaveSlot;
+    public static void SaveInfo(Data data)
+    {
+        BinaryFormatter bformatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + ("/saves/save" + SaveSlot + ".ovtmsave");
+        FileStream fstream = new FileStream(path, FileMode.Create);
+
+        Data save = new Data(data);
+
+        bformatter.Serialize(fstream, data);
+        fstream.Close();
+    }
+
+    public static Data LoadInfo()
+    {
+        string path = Application.persistentDataPath + ("/saves/save" + SaveSlot + ".ovtmsave");
+        if (File.Exists(path))
+        {
+            BinaryFormatter unformatter = new BinaryFormatter();
+            FileStream lstream = new FileStream(path, FileMode.Open);
+
+            Data data = unformatter.Deserialize(lstream) as Data;
+            lstream.Close();
+            return data;
+        }
+        else
+        {
+            Debug.LogError("Save file not found.");
+            return null;
+        }
+
+// FUCK YOU UNITY
+
+    }
+
+
+
+
+
+
+}

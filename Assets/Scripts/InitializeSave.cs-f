@@ -1,0 +1,40 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class InitializeSave : MonoBehaviour
+{
+    int SaveSlot = Data.instance.SaveSlot;
+
+    public void InitSave1()
+    {
+        SaveSlot = 1;
+        SaveSystem.SaveInfo(Data.Data.save);
+    }
+
+    public void InitSave2()
+    {
+        SaveSlot = 2;
+        SaveSystem.SaveInfo(Data.SaveInfo);
+    }
+
+    public void InitSave3()
+    {
+        SaveSlot = 3;
+        SaveSystem.SaveInfo(this);
+    }
+
+    public void InitSave4()
+    {
+        SaveSlot = 4;
+        SaveSystem.SaveInfo(this);
+    }
+
+    public void InitSave5()
+    {
+        SaveSlot = 5;
+        SaveSystem.SaveInfo(this);
+    }
+
+}

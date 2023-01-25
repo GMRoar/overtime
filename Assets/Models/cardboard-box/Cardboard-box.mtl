@@ -1,0 +1,8 @@
+# Made in Blockbench 3.9.2
+newmtl m_0
+map_Kd topo 
+newmtl m_1
+map_Kd brown 
+newmtl m_2
+map_Kd pasted 
+newmtl none

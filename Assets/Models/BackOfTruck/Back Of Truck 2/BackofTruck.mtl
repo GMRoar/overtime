@@ -1,0 +1,16 @@
+# Made in Blockbench 3.9.2
+newmtl m_0
+map_Kd overtimenumberplayte.png 
+newmtl m_1
+map_Kd Gunmetal 
+newmtl m_2
+map_Kd Lights 
+newmtl m_3
+map_Kd Gunmetal-truckbody 
+newmtl m_4
+map_Kd texture 
+newmtl m_5
+map_Kd Dirtywhite 
+newmtl m_6
+map_Kd black 
+newmtl none
